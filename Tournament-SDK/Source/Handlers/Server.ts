@@ -170,7 +170,7 @@ const RoutesDir = path.join(__dirname, "..", "Routes");
   // ... بقية الكود السابق
 
   // تعديل وقت البدء ليكون بعد 6 دقائق كما طلبت سابقاً
-  const StartTime = new Date(new Date().getTime() + 3 * 60 * 1000); 
+  const StartTime = new Date(new Date().getTime() + 30 * 60 * 1000); 
   const TourId = new Date().getTime().toString();
 
   await CreateTournament({
@@ -184,7 +184,7 @@ const RoutesDir = path.join(__dirname, "..", "Routes");
       SignupStart: new Date(new Date().getTime() - 10 * 365 * 24 * 60 * 60 * 1000),
       EntryFee: 0,
       PrizepoolId: GeneratePrizepoolId().toString(),
-      PartySize: 2, // تعديل حجم الفريق إلى 2 ليكون النظام 2v2
+      PartySize: 1, // تعديل حجم الفريق إلى 2 ليكون النظام 2v2
       Status: 1,
       TournamentType: 0,
       Phases: [
