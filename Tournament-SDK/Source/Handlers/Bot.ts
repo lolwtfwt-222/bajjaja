@@ -18,7 +18,7 @@ import { msg } from "../Modules/Logger";
 
 export const Bot = new Client({ intents: [GatewayIntentBits.Guilds] });
 const Rest = new REST({ version: "10" }).setToken(
-  "MTQ0MjU3NzM4NTY1NTM3MzgzNA.Ga6yzr.-LNn5vCLb80OfKTm7NYJoiETiJkWqsJx7tJDto"
+  ""
 );
 
 const regionChoices = Object.keys(Regions).map((name) => ({
@@ -158,7 +158,7 @@ function getEmoteNames(emoteIds: number[]): string {
 
 async function setup() {
   try {
-    await Rest.put(Routes.applicationGuildCommands("1442577385655373834", "1442578153624043605"), {
+    await Rest.put(Routes.applicationGuildCommands("", ""), {
       body: Commands,
     });
     msg("commands ready");

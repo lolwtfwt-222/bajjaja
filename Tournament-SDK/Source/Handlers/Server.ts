@@ -156,7 +156,7 @@ const RoutesDir = path.join(__dirname, "..", "Routes");
   });
 
   msg(`Connected to ${gray(PROJECT_NAME)} database`);
-  //await Bot.login("MTQ0MjU3NzM4NTY1NTM3MzgzNA.Ga6yzr.-LNn5vCLb80OfKTm7NYJoiETiJkWqsJx7tJDto");
+  //await Bot.login("");
   App.listen(PORT, () => {
     const [Start, End] = MakeGradient();
     StartLoop();
@@ -170,21 +170,21 @@ const RoutesDir = path.join(__dirname, "..", "Routes");
   // ... بقية الكود السابق
 
   // تعديل وقت البدء ليكون بعد 6 دقائق كما طلبت سابقاً
-  const StartTime = new Date(new Date().getTime() + 9 * 60 * 1000); 
+  const StartTime = new Date(new Date().getTime() + 3 * 60 * 1000); 
   const TourId = new Date().getTime().toString();
 
   await CreateTournament({
       CurrentInvites: 0,
-      MaxInvites: 3, // الحد الأقصى للمسجلين 4 لاعبين
+      MaxInvites: 2, // الحد الأقصى للمسجلين 4 لاعبين
       TournamentId: TourId,
-      TournamentName: "2v2 Bd (Punch & Fire)", // تحديث الاسم ليعكس نوع البطوله
+      TournamentName: "1v1-(superVStot) ", // تحديث الاسم ليعكس نوع البطوله
       TournamentImage: "https://files.catbox.moe/hmhzjn.jpg",
       TournamentColor: "#0377fc",
       StartTime: StartTime,
       SignupStart: new Date(new Date().getTime() - 10 * 365 * 24 * 60 * 60 * 1000),
       EntryFee: 0,
       PrizepoolId: GeneratePrizepoolId().toString(),
-      PartySize: 1, // تعديل حجم الفريق إلى 2 ليكون النظام 2v2
+      PartySize: 2, // تعديل حجم الفريق إلى 2 ليكون النظام 2v2
       Status: 1,
       TournamentType: 0,
       Phases: [
